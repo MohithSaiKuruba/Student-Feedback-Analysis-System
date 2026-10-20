@@ -9,7 +9,10 @@ Beginner-friendly Flask + MySQL project for anonymous course feedback, aggregate
 - Flask JSON endpoints and aggregated CSV export.
 - Small-group suppression (default minimum 5 rating answers). Comments never appear on the public dashboard.
 
-## Run locally
+## Live version on Netlify
+The deployed site runs on Netlify: the pages in `public/` are static, the API lives in `netlify/functions/`, and data is stored in Netlify Database (managed Postgres). The tables are defined in `db/schema.ts`, and the migrations in `netlify/database/migrations/` are applied automatically on each deploy, including the starting course list and the four questions. To try it locally, run `npm install` and then `netlify dev`. The Flask/MySQL code below is still here for local study and for the tests.
+
+## Run locally (Flask + MySQL)
 Requires Python 3.10+ and MySQL 8+.
 1. Create/activate a virtual environment.
 2. Install: `pip install -r requirements.txt`
