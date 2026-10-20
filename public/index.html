@@ -1,0 +1,10 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Student Voice | Feedback</title><link rel="stylesheet" href="/style.css"></head><body>
+<header class="topbar"><a class="brand" href="/"><span class="mark">SV</span> Student Voice</a><nav><a class="active" href="/">Give feedback</a><a href="/dashboard">Analytics</a></nav></header><main class="container">
+<section class="hero"><div class="eyebrow">YOUR VOICE MATTERS</div><h1>Help make every class <span>better.</span></h1><p>Share honest course feedback in a simple anonymous form. Your ratings help identify what is working and what can improve.</p><div class="pills"><span>✓ Anonymous by design</span><span>✓ About 2 minutes</span><span>✓ Ratings from 1–5</span></div></section>
+<div id="alerts"></div>
+<section class="panel"><div class="eyebrow">FEEDBACK FORM</div><h2>Tell us about your course</h2>
+<p id="loading" class="muted">Loading courses…</p>
+<form id="feedback-form" action="/submit" method="post" hidden><label for="course_id">Select course</label><select id="course_id" name="course_id" required><option value="">Choose a course...</option></select>
+<h3>Your experience</h3><p class="muted">1 means poor; 5 means excellent. Rate each question.</p><div id="questions"></div>
+<label for="comment">Optional comment <small>(avoid names and personal details)</small></label><textarea id="comment" name="comment" rows="4" maxlength="1000" placeholder="What worked well, or what could be improved?"></textarea><div class="privacy"><strong>🔒 Your privacy matters</strong><p>Do not include names or student IDs. Comments are not displayed on the public dashboard.</p></div><button class="primary" type="submit">Submit anonymous feedback →</button></form></section><footer>Student Voice · Student Feedback Analysis System</footer></main>
+<script src="/feedback.js"></script></body></html>
